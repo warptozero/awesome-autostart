@@ -1,8 +1,7 @@
 package = "awesome-autostart"
-version = "1.0-1"
+version = "scm-1"
 source = {
    url = "git://github.com/warptozero/awesome-autostart",
-   tag = "v1.0"
 }
 description = {
    summary = "A fast run-only-once autostart module for Awesome WM",
