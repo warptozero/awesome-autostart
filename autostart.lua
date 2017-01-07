@@ -1,7 +1,16 @@
 ----------------------------------------------------------------------
 --- Autostart module for awesome
 --
--- Start programs only once, not on restart
+-- Start programs only once, not on restart. It is fast, works
+-- every time, takes a single string with command and arguments,
+-- and matches only the base command name for running processes. 
+--
+-- This module is based upon a piece of code from the old AwesomeWM
+-- wiki, which is not online anymore. The original author and license
+-- are unknown.
+--
+-- Author: warptozero
+-- Website: https://github.com/warptozero/awesome-autostart
 ----------------------------------------------------------------------
 
 local awful = require("awful")
