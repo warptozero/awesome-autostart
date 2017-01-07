@@ -5,6 +5,11 @@
 -- every time, takes a single string with command and arguments,
 -- and matches only the base command name for running processes. 
 --
+-- Use like so:
+--   local autostart = require("autostart")
+--   autostart("...")
+--   autostart("...")
+--   
 -- This module is based upon a piece of code from the old AwesomeWM
 -- wiki, which is not online anymore. The original author and license
 -- are unknown.
