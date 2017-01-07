@@ -9,8 +9,9 @@
 -- wiki, which is not online anymore. The original author and license
 -- are unknown.
 --
--- Author: warptozero
--- Website: https://github.com/warptozero/awesome-autostart
+-- @author warptozero
+-- @website https://github.com/warptozero/awesome-autostart
+-- @license MIT
 ----------------------------------------------------------------------
 
 local awful = require("awful")
