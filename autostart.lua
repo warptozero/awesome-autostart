@@ -1,17 +1,17 @@
-------------------------------------------------------------
+----------------------------------------------------------------------
 --- Autostart module for awesome
 --
--- Autostart programs only once and not on restart
-------------------------------------------------------------
+-- Start programs only once, not on restart
+----------------------------------------------------------------------
 
-local spawn = require("awful.util.spawn")
-local dir = require("lfs.dir")
+local awful = require("awful")
+local lfs = require("lfs")
 
 --- Return all current processes
 -- All directories in /proc containing a number represent a process.
 local function processwalker()
   local function yieldprocess()
-    for dir in dir("/proc") do
+    for dir in lfs.dir("/proc") do
       if tonumber(dir) ~= nil then
         local f, err = io.open("/proc/"..dir.."/cmdline")
         if f then
@@ -37,7 +37,8 @@ local function extract(string)
   return string.match(string.match(string, "^%S*"), "[^/]-$") or ""
 end
 
--- Run a command if there is no existing process
+--- Run command if there is no existing process
+-- Takes a command with arguments as a single string
 local function run(command)
   assert(type(command) == "string")
   for process in processwalker() do
@@ -45,7 +46,7 @@ local function run(command)
       return
     end
   end
-  return spawn(command)
+  return awful.util.spawn(command)
 end
 
 return run
