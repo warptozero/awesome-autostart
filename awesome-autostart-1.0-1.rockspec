@@ -1,5 +1,5 @@
 package = "awesome-autostart"
-version = "scm-3"
+version = "1.0-1"
 source = {
    url = "git://github.com/warptozero/awesome-autostart",
 }
